@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="tests">
+    <parameter name="type" value="EE"/>
+    <listeners>
+        <listener class-name="utilities.TestListener" />
+    </listeners>
+    <test name="EE">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="language" value="EN"/>
+        <classes>
+<!--            <class name="tests.EE.ExodusEffect" />-->
+<!--            <class name="tests.EE.SpanishExodusEffect" />-->
+<!--            <class name="tests.EE.NewPath" />-->
+<!--            <class name="tests.EE.SignIn" />-->
+<!--            <class name="tests.EE.InvalidCasesExodusEffect" />-->
+<!--            <class name="tests.EE.InvalidCasesNewPath" />-->
+<!--            <class name="tests.EE.Squeeze" />-->
+<!--            <class name="tests.EE.MailingLists.Exodus.ExodusEffectPartialsList" />-->
+<!--            <class name="tests.EE.MailingLists.Exodus.ExodusEffectCustomerList" />-->
+<!--            <class name="tests.EE.MailingLists.Exodus.PrayerWarriorNetworkBillingList" />-->
+<!--            <class name="tests.EE.MailingLists.Exodus.FaithBasedMedicalUpdatesList" />-->
+<!--            <class name="tests.EE.MailingLists.NewPath.ExodusEffectPartialList" />-->
+<!--            <class name="tests.EE.MailingLists.NewPath.ExodusEffectCustomerList" />-->
+<!--            <class name="tests.EE.MailingLists.NewPath.PrayerWarriorNetworkNonBillingList" />-->
+<!--            <class name="tests.EE.MailingLists.NewPath.FaithBasedMedicalUpdatesList" />-->
+<!--            <class name="tests.EE.ChangePassword" />-->
+<!--            <class name="tests.EE.SpiritOfHealing" />-->
+<!--            <class name="tests.EE.DownloadEEBooks" />-->
+<!--            <class name="tests.EE.DownloadHighwayHealingBooks" />-->
+<!--            <class name="tests.EE.DownloadTheMemoryCovenantBooks" />-->
+<!--            <class name="tests.EE.ExodusSecret" />-->
+<!--            <class name="tests.EE.AdminCreateUser" />-->
+            <class name="tests.EE.AdminCreateUserWithHighWayHealingBundle" />
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="tests">
+    <parameter name="type" value="FW5"/>
+<!--    <parameter name="driverType" value="crossbrowsertesting"/>-->
+        <parameter name="driverType" value="local"/>
+    <listeners>
+        <listener class-name="utilities.TestListener" />
+    </listeners>
+    <test name="FW5">
+        <parameter name="language" value="EN"/>
+        <classes>
+            <class name="tests.FW5.FW5" />
+        </classes>
+    </test>
+</suite>

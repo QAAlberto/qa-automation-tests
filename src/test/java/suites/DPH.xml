@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="tests">
+    <parameter name="type" value="DPH"/>
+    <listeners>
+        <listener class-name="utilities.TestListener" />
+    </listeners>
+    <test name="DPH">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="language" value="EN"/>
+        <classes>
+            <class name="tests.DPH.DPH" />
+        </classes>
+    </test>
+</suite>

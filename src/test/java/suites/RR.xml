@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="tests">
+    <parameter name="type" value="RR"/>
+    <listeners>
+        <listener class-name="utilities.TestListener" />
+    </listeners>
+    <test name="RR">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="language" value="EN"/>
+        <classes>
+<!--            <class name="tests.RR.RR" />-->
+<!--            <class name="tests.RR.RR2" />-->
+<!--            <class name="tests.RR.SignIn" />-->
+<!--            <class name="tests.RR.DownloadEBooks" />-->
+            <class name="tests.RR.ChangePassword" />
+        </classes>
+    </test>
+</suite>
