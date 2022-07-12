@@ -2,11 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="tests">
     <parameter name="type" value="AP"/>
+    <!--    <parameter name="driverType" value="crossbrowsertesting"/>-->
+    <parameter name="driverType" value="local"/>
     <listeners>
         <listener class-name="utilities.TestListener" />
     </listeners>
     <test name="AP">
-        <parameter name="browser" value="chrome"/>
         <parameter name="language" value="EN"/>
         <classes>
             <class name="tests.AP.AP" />

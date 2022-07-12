@@ -690,7 +690,7 @@ public class TestData {
         }
 //        return obj;
         return new Object[][]{
-                {"1b", 1, 0, "6b"}
+                {"1b", 0, 1, "3b"}
         };
     }
 
