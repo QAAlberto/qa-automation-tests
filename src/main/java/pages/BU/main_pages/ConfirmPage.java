@@ -95,12 +95,12 @@ public class ConfirmPage extends BasePage {
         HashMap<String, String> amounts = this.getAmount(bottles, off, insurance, bioUnityUpSell, bioUnityDownSell, cellDivine);
         List<Object> items;
         items = Arrays.asList(new Object[] {
-                "Insurance: ID="+propertyManager.getProperty("insurance", "BU")+" $"+amounts.get("insurance"),
+                "Shipping Insurance Policy: ID="+propertyManager.getProperty("insurance", "BU")+" $"+amounts.get("insurance"),
                 "Shipping: $"+amounts.get("shipping"),
-                "BU: ID="+propertyManager.getProperty("BU" + bottles + off, "BU")+" $"+amounts.get("BU"),
-                "Bio Unity UpSell: ID="+propertyManager.getProperty("bioUnityUpSell", "BU")+" $"+amounts.get("bioUnityUpSell"),
-                "Bio Unity DownSell: ID="+propertyManager.getProperty("bioUnityDownSell", "BU")+" $"+amounts.get("bioUnityDownSell"),
-                "CellDivine: ID="+propertyManager.getProperty("cellDivine" + cellDivine, "BU")+" $"+amounts.get("cellDivine"),
+                "BioUnity "+bottles+": ID="+propertyManager.getProperty("BU" + bottles + off, "BU")+" $"+amounts.get("BU"),
+                "BioUnity - 6 Bottles (Stock Up): ID="+propertyManager.getProperty("bioUnityUpSell", "BU")+" $"+amounts.get("bioUnityUpSell"),
+                "BioUnity - 3 Bottles (Stock Up): ID="+propertyManager.getProperty("bioUnityDownSell", "BU")+" $"+amounts.get("bioUnityDownSell"),
+                "CellDivine "+cellDivine+": ID="+propertyManager.getProperty("cellDivine" + cellDivine, "BU")+" $"+amounts.get("cellDivine"),
                 "Total: $"+amounts.get("total")
         });
 

@@ -58,6 +58,6 @@ public class BU extends BaseTest {
         ConfirmPage confirmPage = cellDivinePage.decide(cellDivine);
         node.info(MarkupHelper.createOrderedList(confirmPage.getList(bottles, off, insurance, bioUnityUpSell, bioUnityDownSell, cellDivine)));
         nodeThread.set(node);
-        Assert.assertEquals(confirmPage.getGrandTotal(), confirmPage.getAmount(bottles, off, insurance, bioUnityUpSell, bioUnityDownSell, cellDivine));
+        Assert.assertEquals(confirmPage.getGrandTotal(), "$" + confirmPage.getAmount(bottles, off, insurance, bioUnityUpSell, bioUnityDownSell, cellDivine).get("total"));
     }
 }
