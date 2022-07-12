@@ -47,14 +47,15 @@ public class ConfirmPage extends BasePage {
         return readText(grandTotalField);
     }
 
-    public List getList(int knightStick, int amplifire){
+    public List<?> getList(int knightStick, int amplifire){
         HashMap<String, String> amounts = this.getAmount(knightStick, amplifire);
         List<Object> items;
         items = Arrays.asList(new Object[] {
-            "AGE: ID="+propertyManager.getProperty("AGE", "AGE")+" $"+amounts.get("AGE"),
-            "Amplifire: ID="+propertyManager.getProperty("amplifire", "AGE")+" $"+amounts.get("amplifire"),
-            "Knight Stick: ID="+propertyManager.getProperty("knightStick", "AGE")+" $"+amounts.get("knightStick"),
-            "Total: $"+amounts.get("total")
+                "AGE: ID="+propertyManager.getProperty("AGE", "AGE")+" $"+amounts.get("AGE"),
+                "AGE Live: ID="+propertyManager.getProperty("AGELive", "AGE"),
+                "Amplifire: ID="+propertyManager.getProperty("amplifire", "AGE")+" $"+amounts.get("amplifire"),
+                "Knight Stick: ID="+propertyManager.getProperty("knightStick", "AGE")+" $"+amounts.get("knightStick"),
+                "Total: $"+amounts.get("total")
         });
         return items;
     }

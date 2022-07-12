@@ -42,7 +42,7 @@ public class BaseTest {
         switch (driverType){
             case "local":
                 System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-                Map<String, Object> prefs = new HashMap<String, Object>();
+                Map<String, Object> prefs = new HashMap<>();
                 prefs.put("download.default_directory",System.getProperty("user.dir") + File.separator + "downloads");
                 ChromeOptions options = new ChromeOptions();
                 options.setExperimentalOption("prefs", prefs);
@@ -52,16 +52,16 @@ public class BaseTest {
                 String username = "tech%40truebornpublishing.com";
                 String authkey = "u4933d1688740210";
                 DesiredCapabilities caps = new DesiredCapabilities();
-//                caps.setCapability("browserName", "Chrome");
-//                caps.setCapability("version", "102");
-//                caps.setCapability("platform", "Windows 10");
-//                caps.setCapability("screenResolution", "1920x1080");
                 caps.setCapability("browserName", "Chrome");
-                caps.setCapability("deviceName", "Pixel 5");
-                caps.setCapability("platformVersion", "11.0");
-                caps.setCapability("platformName", "Android");
-                caps.setCapability("deviceOrientation", "portrait");
-                caps.setCapability("name", type);
+                caps.setCapability("version", "102");
+                caps.setCapability("platform", "Windows 10");
+                caps.setCapability("screenResolution", "1920x1080");
+//                caps.setCapability("browserName", "Chrome");
+//                caps.setCapability("deviceName", "Pixel 5");
+//                caps.setCapability("platformVersion", "11.0");
+//                caps.setCapability("platformName", "Android");
+//                caps.setCapability("deviceOrientation", "portrait");
+//                caps.setCapability("name", type);
 
                 driver = new RemoteWebDriver(new URL("http://" + username + ":" + authkey +"@hub.crossbrowsertesting.com:80/wd/hub"), caps);
                 automatedTest = new AutomatedTest(driver.getSessionId().toString());

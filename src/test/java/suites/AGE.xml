@@ -2,16 +2,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="tests">
     <parameter name="type" value="AGE"/>
+<!--    <parameter name="driverType" value="crossbrowsertesting"/>-->
+        <parameter name="driverType" value="local"/>
     <listeners>
         <listener class-name="utilities.TestListener" />
     </listeners>
     <test name="AGE">
-        <parameter name="browser" value="chrome"/>
         <parameter name="language" value="EN"/>
         <classes>
             <class name="tests.AGE.AGE" />
-            <class name="tests.AGE.DownloadEBooks" />
-            <class name="tests.AGE.SignIn" />
+<!--            <class name="tests.AGE.DownloadEBooks" />-->
+<!--            <class name="tests.AGE.SignIn" />-->
         </classes>
     </test>
 </suite>
