@@ -75,9 +75,11 @@ public class ConfirmPage extends BasePage {
 
         double finalTotal = total;
         double finalAPRounded = APRounded;
+        double finalShippingRounded = shippingRounded;
         return new HashMap <>() {{
             put("total", doubleToString(finalTotal));
             put("AP", doubleToString(finalAPRounded));
+            put("shipping", doubleToString(finalShippingRounded));
             put("apostlePromiseUpSell", doubleToString(apostlePromiseUpSellRounded));
             put("apostlePromiseDownSell", doubleToString(apostlePromiseDownSellRounded));
             put("divineTurmeric", doubleToString(divineTurmericRounded));
@@ -88,10 +90,11 @@ public class ConfirmPage extends BasePage {
         HashMap<String, String> amounts = this.getAmount(bottles, apostlePromiseUpSell, apostlePromiseDownSell, divineTurmeric);
         List<Object> items;
         items = Arrays.asList(new Object[] {
-                "AP: ID="+propertyManager.getProperty("AP" + bottles, "AP")+" $"+amounts.get("AP"),
-                "Divine Vision UpSell: ID="+propertyManager.getProperty("divineVisionUpSell", "AP")+" $"+amounts.get("divineVisionUpSell"),
-                "Divine Vision DownSell: ID="+propertyManager.getProperty("divineVisionDownSell", "AP")+" $"+amounts.get("divineVisionDownSell"),
-                "Divine Turmeric: ID="+propertyManager.getProperty("divineTurmeric" + divineTurmeric, "AP")+" $"+amounts.get("divineTurmeric"),
+                "Apostle Promise "+bottles+": ID="+propertyManager.getProperty("AP" + bottles, "AP")+" $"+amounts.get("AP"),
+                "Shipping: $"+amounts.get("shipping"),
+                "Apostles Promise - 6 Bottles - Discount: ID="+propertyManager.getProperty("apostlePromiseUpSell", "AP")+" $"+amounts.get("apostlePromiseUpSell"),
+                "Apostles Promise - 3 Bottles - Discount: ID="+propertyManager.getProperty("apostlePromiseDownSell", "AP")+" $"+amounts.get("apostlePromiseDownSell"),
+                "Divine Turmeric "+divineTurmeric+": ID="+propertyManager.getProperty("divineTurmeric" + divineTurmeric, "AP")+" $"+amounts.get("divineTurmeric"),
                 "Total: $"+amounts.get("total")
         });
 

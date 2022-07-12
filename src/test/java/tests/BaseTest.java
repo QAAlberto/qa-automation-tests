@@ -76,11 +76,11 @@ public class BaseTest {
 
     @AfterMethod
     public void afterMethod(){
-        driver.manage().deleteAllCookies();
+//        driver.manage().deleteAllCookies();
     }
 
     @AfterClass
     public void afterClass(){
-        driver.quit();
+//        driver.quit();
     }
 }

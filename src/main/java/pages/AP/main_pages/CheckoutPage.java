@@ -35,7 +35,7 @@ public class CheckoutPage extends BasePage {
         return this;
     }
 
-    public ArrayList<Object> submitCheckoutForm(String bottles){
+    public String submitCheckoutForm(String bottles){
         switch (bottles){
             case "1b":
                 click(oneBottle);
@@ -62,10 +62,7 @@ public class CheckoutPage extends BasePage {
         writeText(cardSecurityCodeTextbox, propertyManager.getProperty("cardSecurityCode", "AP"));
         click(submitButton);
         logger.info("Checkout form submitted");
-        ArrayList<Object> aux = new ArrayList<>();
-        aux.add(email);
-        aux.add(new ApostlePromiseUpSellPage(driver));
-        return aux;
+        return email;
     }
 
     public String getDeviceID(){

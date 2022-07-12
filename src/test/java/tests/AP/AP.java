@@ -31,6 +31,7 @@ public class AP extends BaseTest {
         CheckoutPage checkoutPage = new CheckoutPage(driver);
         Utils utils = new Utils();
         ApostlePromiseDownSellPage apostlePromiseDownSellPage = new ApostlePromiseDownSellPage(driver);
+        ApostlePromiseUpSellPage apostlePromiseUpSellPage = new ApostlePromiseUpSellPage(driver);
         DivineTurmericPage divineTurmericPage = new DivineTurmericPage(driver);
 
         String title = utils.customReportName(new String[]{
@@ -47,8 +48,7 @@ public class AP extends BaseTest {
         ExtentTest node = test.get().createNode("Iteration " + title);
 
         checkoutPage.checkoutPage(baseUrl);
-        String email = (String) checkoutPage.submitCheckoutForm(bottles).get(0);
-        ApostlePromiseUpSellPage apostlePromiseUpSellPage = (ApostlePromiseUpSellPage) checkoutPage.submitCheckoutForm(bottles).get(1);
+        String email = checkoutPage.submitCheckoutForm(bottles);
         node.info(email);
         apostlePromiseUpSellPage.decide(apostlePromiseUpSell);
         if(apostlePromiseUpSell == 0) apostlePromiseDownSellPage.decide(apostlePromiseDownSell);
